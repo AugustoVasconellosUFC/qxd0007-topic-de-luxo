@@ -1,13 +1,19 @@
 public class Passageiro {
 
-    public Passageiro(String nome, int idade) {
+    private final String nome;
 
+    private final int idade;
+
+    public Passageiro(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
     }
+
     public boolean ePrioritario() {
-        return true;
+        return idade >= 65;
     }
 
     String getNome() {
-        return null;
+        return nome;
     }
 }
