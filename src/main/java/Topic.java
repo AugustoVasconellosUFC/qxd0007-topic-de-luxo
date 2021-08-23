@@ -36,6 +36,22 @@ public class Topic {
         return assentosNormais;
     }
 
+    public int getNumeroAssentosPrioritarios() {
+        return qtdPrioritarios;
+    }
+
+    public int getNumeroAssentosNormais() {
+        return qtdNormais;
+    }
+
+    public Passageiro getPassageiroAssentoNormal(int lugar) {
+        return assentosNormais.get(lugar);
+    }
+
+    public Passageiro getPassageiroAssentoPrioritario(int lugar) {
+        return assentosPrioritarios.get(lugar);
+    }
+
     public int getVagas() {
         return capacidade - (contadorNormais + contadorPrioritarios);
     }
